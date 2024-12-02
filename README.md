@@ -8,39 +8,21 @@ The focus of this project is to provide an efficient and reusable framework for 
 
 ```bash
 android/
-  ├── exceptions/
-  │   └── CustomException.kt
-  ├── extensions/
-  │   └── LifecycleExtensions.kt
+ └── exceptions/        # Custom error handling classes
+ └── extensions/        # Common lifecycle extensions
 core/
-  ├── interactor/
-  │   └── NetworkCallWrapper.kt
+ └── interactor/        # Network call wrapper
 di/
-  ├── CustomErrorsApp.kt
-  ├── RemoteModule.kt
-  └── RepositoryModule.kt
+ └── CustomErrorsApp/   # Application class for DI
+ └── RemoteModule/      # Provides remote dependencies (e.g., Retrofit)
+ └── RepositoryModule/  # Provides repository dependencies
 feature/
-  ├── posts/
-  │   ├── data/
-  │   │   ├── model/
-  │   │   │   └── PostDto.kt
-  │   │   ├── remote/
-  │   │   │   └── ApiAS.kt
-  │   │   └── repository/
-  │   │       └── PostsRepo.kt
-  ├── domain/
-  │   ├── model/
-  │   │   └── Post.kt
-  │   ├── repository/
-  │   │   └── IPostsRepo.kt
-  │   ├── useCase/
-  │   │   └── GetAllPostsUC.kt
-  │   └── presentation/
-  │       ├── state/
-  │       └── viewModel/
-  │           └── MainVM.kt
+ └── posts/             # Example feature: Posts
+      └── data/         # Models, mappers, API service
+      └── domain/       # Domain models, repositories, use cases
+      └── presentation/ # ViewModel, state, and UI
 utils/
-  └── IBaseMapper.kt
+ └── IBaseMapper.kt     # Reusable mappers for DTOs and domain objects
 ```
 
 ## 🛠️ Technologies
